@@ -1,6 +1,7 @@
 html {
     box-sizing: border-box;
     scroll-behavior: smooth;
+
     background-color: #242222;
 }
 
@@ -32,8 +33,7 @@ h6 {
 }
 
 body {
-    font-family: 'Montserrat',
-    sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 500;
 
 }
