@@ -4,6 +4,7 @@ import './Header.css'
 import Background from './videos/video.mp4';
 import Cup from './images/cup.png'
 import {Button} from "./Button";
+import Drupalicon from "./images/druplicon.svg"
 
 const Header = () => {
     return (
@@ -11,7 +12,11 @@ const Header = () => {
             {/* фоновое видео */}
             <video src={Background} autoPlay loop muted/>
             {/* затемняющий слой */}
-            <div className="dark-layer" />
+            <div className="dark-layer">
+                <div className="drupal-container">
+                    <img src={Drupalicon} className="drupal-img"/>
+                </div>
+            </div>
             <div className="header-container">
                 <div className="header-inner">
                     {/* левая сторона макета */}
@@ -22,7 +27,7 @@ const Header = () => {
                             и запущенности
                         </h2>
                         <Link to="rates">
-                            <Button>ТАРИФЫ</Button>
+                            <Button buttonStyle={'btn--white'}>ТАРИФЫ</Button>
                         </Link>
                     </div>
                     {/* правая сторона макета */}
@@ -70,8 +75,6 @@ const Header = () => {
                                 проектов на поддержке
                             </div>
                         </div>
-
-
                     </div>
                 </div>
             </div>

@@ -21,11 +21,14 @@ video {
     position: absolute;
     object-fit: cover;
     z-index: -1;
+}
 
-    /*drupal icon фон*/
-    /*TODO: иконка не масштабируется (адаптив)*/
-    background-image: url("./images/druplicon.svg");
-    background-repeat: no-repeat
+.drupal-container {
+    max-width: 850px;
+}
+
+.drupal-img {
+    width: 100%;
 }
 
 .header {
