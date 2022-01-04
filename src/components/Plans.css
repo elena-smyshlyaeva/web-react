@@ -164,3 +164,34 @@ p, .plans-li {
 
     border-bottom: 1px solid #050C33;
 }
+
+@media screen and (max-width: 769px) {
+    .plans-items {
+        flex-direction: column;
+        background-color: transparent;
+
+        padding: 5px;
+    }
+
+    .plans-item {
+        height: 430px;
+        padding-left: 10px;
+        padding-top: 10px;
+        padding-right: 10px;
+
+        margin: 0 0 20px;
+
+        background-color: #fff;
+
+        width: 100%;
+
+    }
+
+    .price, .hour {
+        display: none;
+    }
+
+    .plans-background {
+        height: 1800px;
+    }
+}
