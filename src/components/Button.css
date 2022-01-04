@@ -10,9 +10,16 @@
     color: #fff;
 }
 
-.btn--outline {
+.btn--white {
     background-color: transparent;
     border: 2px solid var(--primary);
+    transition: all 0.3s ease-out;
+}
+
+.btn--orange {
+    background-color: transparent;
+    border: 2px solid var(--primary);
+    color: var(--primary);
     transition: all 0.3s ease-out;
 }
 
@@ -24,4 +31,8 @@
 .btn--medium:hover {
     background-color: var(--primary);
     transition: all 0.3s ease-out;
+}
+
+.btn--orange:hover {
+    color: #fff;
 }
