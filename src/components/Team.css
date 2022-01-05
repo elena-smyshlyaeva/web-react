@@ -1,0 +1,87 @@
+.team{
+    margin-top: 160px;
+    background-color: #fff;
+}
+
+.team-container {
+    max-width: 1080px;
+    margin: 0 auto;
+}
+
+.team-title{
+    width: 201px;
+    margin-bottom:80px;
+    margin: 0 auto;
+    font-weight: bold;
+    font-size: 42px;
+    font-style: normal;
+    line-height: 51px;
+    color: #050C33;
+}
+
+.team-items{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+.team-item{
+    width: calc(100% / 3);
+    height: 374px;
+    margin-right: 0;
+    margin-bottom: 82px;
+}
+
+.team-item-title {
+    margin-top: 30px;
+    margin-bottom: 3px;
+    font-weight: bold;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 22px;
+    color: #050C33;
+}
+
+.team-item-desc {
+    opacity: 0.7;
+    font-weight: 500;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 22px;
+    color: #050C33;
+}
+
+@media screen and (max-width: 1024px){
+    .team-items{
+        justify-content: space-between;
+    }
+}
+@media screen and (max-width: 768px){
+    .team-item{
+        width: 50%;
+    }
+    .team-title{
+        font-size: 24px;
+    }
+    .team-item-title{
+        font-size: 14px;
+    }
+    .team-item-desc{
+        font-size: 14px;
+    }
+}
+@media screen and (max-width: 426px) {
+    .team-item {
+        width: 50%;
+    }
+    .team-title{
+        font-size: 24px;
+    }
+    .team-item-title{
+        font-size: 14px;
+    }
+    .team-item-desc{
+        font-size: 14px;
+    }
+
+}
