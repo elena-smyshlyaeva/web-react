@@ -10,29 +10,8 @@ import image6 from './images/6.png';
 import image7 from './images/7.png';
 
 function Cases() {
-    // const style1 = {
-    //     width: '33%'
-    // };
-    // const style2 = {
-    //     width: '66%'
-    // };
-    // const style3 = {
-    //     width: '33%'
-    // };
-    // const style4 = {
-    //     width: '33%'
-    // };
-    // const style5 = {
-    //     width: '33%'
-    // };
-    // const style6 = {
-    //     width: '66%'
-    // };
-    // const style7 = {
-    //     width: '33%'
-    // };
     return (
-        <div className="cases">
+        <div className="cases" id="cases">
             <div className="cases-container">
                 <div className="cases-title">
                     Последние кейсы

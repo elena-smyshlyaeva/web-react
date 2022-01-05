@@ -5,7 +5,7 @@ import {Button} from "./Button";
 
 function Plans() {
     return (
-        <div className="plans">
+        <div className="plans" id="plans">
             <img src={D} alt="D" className="plans-background"/>
             <div className="plans-container">
                 <div className="plans-title">

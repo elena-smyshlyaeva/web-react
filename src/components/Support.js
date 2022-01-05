@@ -11,7 +11,7 @@ import { ReactComponent as Support8} from "../components/images/support8.svg";
 
 function Support() {
     return (
-        <div className="support">
+        <div className="support" id="support">
             <div className="support-container">
                 <div className="support-title">
                     Поддержка от Drupal-coder
