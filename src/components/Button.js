@@ -8,7 +8,8 @@ export const Button = ({
 }) => {
     const STYLES = [
         'btn--white',
-        'btn--orange'
+        'btn--orange',
+        'btn--black'
     ];
 
     const checkButtonStyle = STYLES.includes(buttonStyle) ? buttonStyle : STYLES[0];

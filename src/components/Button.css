@@ -23,9 +23,18 @@
     transition: all 0.3s ease-out;
 }
 
+.btn--black {
+    background-color: transparent;
+    border: 2px solid rgba(5, 12, 51, 0.2);
+
+    color: #050C33;
+    transition: all 0.3s ease-out;
+}
+
 .btn--medium {
     padding: 8px 20px;
     font-size: 12px;
+    line-height: 12px;
 }
 
 .btn--medium:hover {
@@ -34,5 +43,10 @@
 }
 
 .btn--orange:hover {
+    color: #fff;
+}
+
+.btn--black:hover {
+    background-color: #050C33;
     color: #fff;
 }
