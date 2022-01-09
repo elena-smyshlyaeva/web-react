@@ -69,7 +69,7 @@ function decrement(){
         );
     }
         const settings = {
-            dots: true,
+            dots: false,
             arrows: true,
             nextArrow: <NextArrow />,
             prevArrow: <PrevArrow />,
@@ -161,8 +161,9 @@ function decrement(){
                             <div className="slider-item-text">Нуреев Александр, менеджер проекта Winamp Russian Community</div>
                         </div>
                     </Slider>
-                        <h1>{zero}{count}<p>/14</p></h1>
+                        
                     </div>
+                    <h1>{zero}{count}<p> / 14</p></h1>
                 </div>
             </div>
         );
