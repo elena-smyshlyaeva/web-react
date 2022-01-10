@@ -1,0 +1,42 @@
+:root {
+    --primary: #F14D34;
+}
+
+.btn {
+    padding: 8px 20px;
+    width: 220px;
+    height: 60px;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.btn--white {
+    background-color: transparent;
+    border: 2px solid var(--primary);
+    transition: all 0.3s ease-out;
+}
+
+.btn--orange {
+    background-color: transparent;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    transition: all 0.3s ease-out;
+}
+
+.btn--medium {
+    padding: 8px 20px;
+    font-size: 12px;
+}
+
+.btn--medium:hover {
+    background-color: var(--primary);
+    transition: all 0.3s ease-out;
+}
+
+.btn--orange:hover {
+    color: #fff;
+}
+.disabled{
+    background-image: url(../components/images/loading.gif);
+    content:" ";
+}
