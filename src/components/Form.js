@@ -13,7 +13,11 @@ const Form = () => {
 
     //заменить на фетч
     const onSubmit = data => {
-        console.log('Отправлено', data);
+        console.log(data);
+        localStorage.setItem('имя', data.name);
+        localStorage.setItem('телефон', data.phone);
+        localStorage.setItem('почта', data.mail);
+        localStorage.setItem('комментарий', data.comment);
         reset();
     }
 
@@ -68,6 +72,7 @@ const Form = () => {
                 {... register('comment')}
             />
             <br/>
+
             <Button buttonStyle="btn--form" buttonClasses={buttonClasses.join("")} type={"submit"}>ОСТАВИТЬ ЗАЯВКУ!</Button>
         </form>
     );
