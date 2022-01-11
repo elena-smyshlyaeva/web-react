@@ -1,0 +1,258 @@
+.plans {
+    position: relative;
+}
+
+.plans-container {
+    padding-top: 160px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    max-width: 1196px;
+    margin: 0 auto;
+}
+
+.plans-background {
+    z-index: -1;
+
+    position:absolute;
+    right: 0;
+    top: 0;
+}
+
+.plans-title {
+    color: #050C33;
+    font-size: 42px;
+    font-weight: bold;
+
+    margin-bottom: 46px;
+}
+
+.plans-items {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+
+    background-color: #fff;
+}
+
+.plans-item {
+    height: 650px;
+    width: 350px;
+
+    padding-left: 60px;
+    padding-top: 60px;
+    padding-right: 35px;
+
+    margin: 0 5px;
+
+    border: 1px solid rgba(141, 140, 140, 0.1);
+    border-radius: 5px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+}
+
+.plans-item:hover {
+    box-shadow: 0 5px 30px rgba(141, 140, 140, 0.2);
+    transition: all 0.3s;
+
+    transform: scale(1.05);
+    background-color: #fff;
+}
+
+.plans-item-title {
+    padding-top: 17px;
+    padding-bottom: 20px;
+
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+}
+
+p, .plans-li {
+    margin: 0;
+    color: #050C33;
+}
+
+.name {
+    color: #F14D34;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.price {
+    font-size: 72px;
+    line-height: 72px;
+    font-weight: bold;
+
+    position: relative;
+
+    display: inline;
+}
+
+.price::after {
+    content:"₽";
+    font-size: 28px;
+    font-weight: 500;
+
+    top: -5px;
+
+    position: absolute;
+
+}
+
+.hour {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.plans-item-desc {
+    margin-top: 40px;
+    padding-left: 36px;
+
+    position: relative;
+}
+
+.plans-li {
+    margin: 20px 0;
+    line-height: 20px;
+
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.plans-li::before {
+    content: url("./images/checked.svg");
+    position: absolute;
+
+    left: 0;
+}
+
+.plans-btn {
+    margin-bottom: 30px;
+}
+
+.plans-subtitle {
+    margin-top: 74px;
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+}
+
+.plans-subtitle-up {
+    max-width: 486px;
+    text-align: center;
+
+    margin-bottom: 10px;
+    opacity: 0.5;
+
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 500;
+    color: #050C33;
+}
+
+.plans-subtitle-link {
+    font-size: 12px;
+    line-height: 12px;
+    color: #050C33;
+
+    border-bottom: 1px solid #050C33;
+}
+
+@media screen and (max-width: 769px) {
+    .plans-items {
+        flex-direction: column;
+        background-color: transparent;
+
+        padding: 5px;
+    }
+
+    .plans-item {
+        height: 430px;
+        padding-left: 10px;
+        padding-top: 10px;
+        padding-right: 10px;
+
+        margin: 0 0 20px;
+
+        background-color: #fff;
+
+        width: 100%;
+    }
+
+    .price, .hour {
+        display: none;
+    }
+
+    .plans-background {
+        height: 1800px;
+    }
+
+    .plans-title {
+        font-size: 24px;
+    }
+}
+.popup
+{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left:0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.541);
+    opacity: 0;
+    visibility: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: all 0.8s ease 0s;
+}
+.popup.open
+{
+    opacity: 1;
+    visibility: visible;
+}
+.popup.open .popup_content
+{
+    transform: translate(0px,0px);
+    opacity:1;
+}
+.popup_body
+{
+    min-height:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 10px;
+}
+.popup_content
+{
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    background-color: rgb(0, 32, 32);
+    color: aliceblue;
+    border:3px solid aliceblue;
+    border-radius: 10px;
+    position: relative;
+    transition: all 0.8s ease 0s;
+    opacity:0;
+    transform:translate(0px,-100%);
+}
+
+.popup_close
+{
+    position: absolute;
+    top: 2px;
+    right: 15px;
+    color:aliceblue;
+    font-family: Calibri ;
+    font-size: 25px;
+}
