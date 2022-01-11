@@ -14,10 +14,19 @@ const Form = () => {
     } = useForm({ mode: 'onChange' });
 
 
-    //history.pushState(null,null,"Form");
+
 
     //заменить на фетч
     const onSubmit = async (data) => {
+        setB(true);
+
+        if (!isValid) {
+            buttonClasses.push('disabled ');
+            //класс не добавляется(вне зависимоти где вызвать .push)
+        } else {
+            buttonClasses = [' '];
+        }
+
         console.log(data);
         localStorage.setItem('имя', data.name);
         localStorage.setItem('телефон', data.phone);
@@ -26,13 +35,6 @@ const Form = () => {
 
         let formdata= JSON.stringify(data);
 
-        if (!isValid) {
-            buttonClasses.push('disabled ');
-
-        } else {
-            buttonClasses = [' '];
-        }
-        b=true;
        /* const formdata = new FormData(event.target)
         // convert FormData to json object
         const json = {}
@@ -64,8 +66,8 @@ const Form = () => {
 
     /*обработка добавления класса для блокировки кнопки отправления*/
     let buttonClasses = [' '];
-    let b=false;
-
+            
+    const [b, setB] = useState(false);
 
     return (
         <form method="POST" onSubmit={handleSubmit(onSubmit)}>
@@ -119,15 +121,15 @@ const Form = () => {
                 />
                         <img src={MarkRectangle} alt="img" className="mark-rect"/>
                         <img src={Mark} alt="img" className="mark"/>
-                <p className='checkbox-title'> Отправляя заявку, я даю согласие на обработку своих персональных
-                    данных  </p>
+                <p className='checkbox-title'> Отправляя заявку, я даю согласие на обработку своих персональных данных  </p>
                 </div>
             </label>
             <br />
 
-            <Button buttonStyle="btn--form" buttonClasses={buttonClasses.join("")} type={"submit"} disabled={b}>ОСТАВИТЬ ЗАЯВКУ!</Button> //disabled не работает
+            <Button buttonStyle="btn--form" buttonClasses={buttonClasses.join("")} type={"submit"} disabled={b}>ОСТАВИТЬ ЗАЯВКУ!</Button> 
         </form>
-    );
+    ); 
+    //disabled={b} не работает
 };
 
 export default Form;
