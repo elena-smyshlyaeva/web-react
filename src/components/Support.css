@@ -1,0 +1,96 @@
+.support {
+    /*из макета*/
+    padding-top: 80px;
+
+    color: #050C33;
+}
+
+.support-container {
+    /*из макета*/
+    max-width: 1196px;
+    margin: 0 auto;
+}
+
+.support-title {
+    /*из макета*/
+    max-width: 406px;
+    font-size: 42px;
+    font-weight: bold;
+
+    /*текст и блок выравниваем по центру*/
+    text-align: center;
+    margin: 0 auto 56px;
+}
+
+.support-items {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.support-item {
+    max-width: 292px;
+    height: 292px;
+
+    padding: 30px;
+
+    border-radius: 5px;
+    /*на глаз*/
+    box-shadow: 6px 30px 29px -6px rgba(141, 140, 140, 0.2);
+    margin-right: 5px;
+    margin-bottom: 5px;
+
+    background-color: #fff;
+
+    position: relative;
+}
+
+.support-item-num {
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+
+.support-item-title {
+    max-width: 232px;
+    margin-bottom: 12px;
+
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.support-item-desc {
+    max-width: 233px;
+
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: normal;
+    opacity: 0.7;
+}
+
+.support-img {
+    position: absolute;
+
+    bottom: -4px;
+    right: 0;
+}
+
+@media screen and (max-width: 769px) {
+    .support-items {
+        /*блоки по одному в строке*/
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .support-item {
+        max-width: 100%;
+        width: 95%;
+    }
+
+    .support-title {
+        font-size: 24px;
+    }
+
+    .support-title {
+        max-width: 190px;
+        margin-bottom: 20px;
+    }
+}

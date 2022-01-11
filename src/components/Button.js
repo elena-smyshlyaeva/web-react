@@ -4,11 +4,14 @@ import './Button.css'
 export const Button = ({
                            children, //аргумент внутри тега
                            onClick, //функция, реагирующая на клик
-                           buttonStyle
+                           buttonStyle,
+                           buttonClasses
 }) => {
     const STYLES = [
         'btn--white',
-        'btn--orange'
+        'btn--orange',
+        'btn--black',
+        'btn--form'
     ];
 
     const checkButtonStyle = STYLES.includes(buttonStyle) ? buttonStyle : STYLES[0];
@@ -16,7 +19,7 @@ export const Button = ({
     return(
         <button
             onClick={onClick}
-            className={`btn ${checkButtonStyle} btn--medium`}
+            className={`btn ${buttonClasses} ${checkButtonStyle} btn--medium`}
         >
             {children}
         </button>

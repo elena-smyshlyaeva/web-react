@@ -1,0 +1,82 @@
+.services {
+    /*из макета*/
+    padding-top: 100px;
+    background-color: #fff;
+}
+
+.services-container {
+    /*из макета*/
+    max-width: 1196px;
+    margin: 0 auto;
+    color: #050C33;
+}
+
+.services-text {
+    font-weight: bold;
+    font-size: 42px;
+    color: #050C33;
+
+    max-width: 580px;
+    margin-bottom: 18px;
+}
+
+.services-subtitle {
+    font-size: 16px;
+    max-width: 493px;
+    margin-bottom: 60px;
+    opacity: 0.7;
+    line-height: 22px;
+}
+
+.services-items {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.service-item {
+    /*4 айтема в строке*/
+    width: 25%;
+    height: 194px;
+    margin-bottom: 50px;
+
+    position: relative;
+}
+
+.services-desc {
+    max-width: 182px;
+    opacity: 0.7;
+    margin-top: 25px;
+    line-height: 22px;
+}
+
+.background-d {
+    position: absolute;
+    left: -50px;
+    top: 15px;
+}
+
+@media screen and (max-width: 1024px) {
+    .services-container {
+        padding: 0 30px;
+    }
+}
+@media screen and (max-width: 768px) {
+    /*адаптив*/
+    .service-item {
+        width: 50%;
+    }
+
+    .services-text {
+        font-size: 24px;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .service-item {
+        text-align: center;
+    }
+
+    .background-d {
+        left: 0;
+    }
+}

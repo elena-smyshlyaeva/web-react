@@ -1,0 +1,218 @@
+video {
+    position: absolute;
+    width: 100%;
+    /*из макета*/
+    height: 650px;
+    top: 0;
+    /*сохранение соотношения сторон и заполнение заданного размера*/
+    object-fit: cover;
+    /*самый низкий уровень наложения*/
+    z-index: -1;
+}
+
+/*затемняет фоновое видео*/
+.dark-layer {
+    width: 100%;
+    height: 650px;
+    top: 0;
+    left: 0;
+
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.drupal-container {
+    max-width: 850px;
+}
+
+.drupal-img {
+    width: 100%;
+}
+
+.header {
+    /*белый цвет шрифта*/
+    color: #fff;
+    /*отступ хедера из макета*/
+    padding-top: 190px;
+    height: 650px;
+}
+
+.header-container {
+    /*из макета*/
+     max-width: 1196px;
+     margin: 0 auto;
+}
+
+.header-inner {
+     display: flex;
+    /*распределяем контент на равное расстояние*/
+     justify-content: space-between;
+ }
+
+.title {
+    /*все данные из макета*/
+     max-width: 506px;
+     font-weight: bold;
+     font-size: 52px;
+     padding-bottom: 15px;
+ }
+
+.subtitle {
+    /*все данные из макета*/
+     max-width: 486px;
+     font-weight: 400;
+     opacity: 0.8;
+     font-size: 18px;
+     padding-bottom: 55px;
+ }
+
+.header-rating {
+    /*из макета*/
+    max-width: 593px;
+    height: 292px;
+
+     display: flex;
+     flex-direction: row;
+    /*разрешен перенос блоков флексбокса*/
+     flex-wrap: wrap;
+
+    justify-content: space-between;
+
+    align-content: space-between;
+ }
+
+.rating-item {
+    /*для вертикальных оранжевых линий*/
+    position: relative;
+
+    /*из макета*/
+    width: 180px;
+    height: 80px;
+
+    margin-bottom: 25px;
+}
+
+.description {
+    /*из макета*/
+    font-size: 12px;
+    width: 161px;
+    height: 45px;
+
+    opacity: 0.7;
+}
+
+.rating-item::after {
+     position: absolute;
+     content: "";
+    /*из макета*/
+     left: -10px;
+     bottom: -20px;
+     background: #F14D34;
+     width: 3px;
+     height: 80px;
+ }
+
+.rating№1 {
+     font-weight: bold;
+     font-size: 48px;
+ }
+
+.rating {
+     font-size: 24px;
+     font-weight: 700;
+     padding-top: 25px;
+ }
+
+.cup-img {
+     position: absolute;
+     left: 55px;
+     top: -10px;
+ }
+
+.header .btn {
+    color: #fff;
+}
+
+@media screen and (max-width: 1024px) {
+    .header-container {
+        padding: 0 30px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        padding-top: 30px;
+    }
+    /*изменение расположения флекс айтемов*/
+    .header-inner {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    /*в мобильной версии рейтинг занимает всю ширину*/
+    .header-rating {
+        max-width: 100%;
+    }
+
+    /*заголовок и подзаголовок располагаются колонкой по центру*/
+    .header-support {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        margin-bottom: 30px;
+    }
+
+    .title {
+        padding-bottom: 30px;
+        font-size: 40px;
+        max-width: 400px;
+    }
+
+    /*айтемы будут располагаться по 2 в строке*/
+    .rating-item {
+        width: 50%;
+    }
+
+    .rating-item::after {
+        bottom: -10px;
+    }
+}
+
+@media screen and (max-width: 426px) {
+    .title {
+        font-size: 24px;
+        max-width: 228px;
+    }
+
+    .subtitle {
+        font-size: 12px;
+    }
+
+    .rating {
+        font-size: 12px;
+    }
+
+    .rating№1 {
+        font-size: 20px;
+    }
+
+    .cup-img {
+        width: 35px;
+        left: 23px;
+        top: -13px;
+    }
+
+    .btn--medium {
+        width: 170px;
+        height: 45px;
+        font-size: 12px;
+    }
+
+    .description {
+        width: 100px;
+    }
+}

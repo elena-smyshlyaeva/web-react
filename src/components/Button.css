@@ -23,9 +23,18 @@
     transition: all 0.3s ease-out;
 }
 
+.btn--black {
+    background-color: transparent;
+    border: 2px solid rgba(5, 12, 51, 0.2);
+
+    color: #050C33;
+    transition: all 0.3s ease-out;
+}
+
 .btn--medium {
     padding: 8px 20px;
     font-size: 12px;
+    line-height: 12px;
 }
 
 .btn--medium:hover {
@@ -39,4 +48,22 @@
 .disabled{
     background-image: url(../components/images/loading.gif);
     content:" ";
+
+.btn--black:hover {
+    background-color: #050C33;
+    color: #fff;
+}
+
+.btn--form {
+    background-color: var(--primary);
+}
+
+.btn--form:hover {
+    background-color: #fff;
+    color: var(--primary);
+}
+
+.disabled:hover {
+    background-color: var(--primary);
+    color: #fff;
 }

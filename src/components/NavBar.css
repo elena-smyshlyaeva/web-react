@@ -1,0 +1,278 @@
+.navbar {
+    /*верхний слой*/
+    z-index: 100;
+    position: absolute;
+    /*из макета*/
+    font-size: 12px;
+    font-family: 'Ubuntu', sans-serif;
+    color: #fff;
+    width: 100%;
+    transition: all 0.5s;
+}
+
+.tel {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+}
+
+.nav-wrap {
+    display: flex;
+}
+
+.active {
+    padding-bottom: 5px;
+    transition: all 0.2s;
+    border-bottom: 2px solid #F14D34;
+}
+
+.navbar-container {
+    max-width: 1240px;
+    padding: 0 30px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+    margin-right: 60px;
+}
+
+.navbar-logo-menu {
+    display: flex;
+}
+
+
+#navbar-scrolled {
+    position: fixed;
+    transition: all 0.5s;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 1);
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+}
+
+.nav-item {
+    position: relative;
+    opacity: 0.8;
+    margin-right: 30px;
+
+    cursor: pointer;
+}
+
+.navbar-info {
+    display: flex;
+}
+
+.nav-item:hover {
+    padding-bottom: 1px;
+    transition: all 0.5s;
+    border-bottom: 2px solid #F14D34;
+    opacity: 1;
+
+}
+
+.nav-item .active {
+    padding-bottom: 1px;
+    transition: all 0.2s;
+    border-bottom: 2px solid #F14D34;
+}
+
+.active:hover {
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+.menu-icon {
+    display: none;
+}
+
+/*выпадающий список*/
+.nav-dropdown-list {
+    display: none;
+}
+
+.nav-dropdown-item {
+    padding: 5px;
+}
+
+.nav-dropdown-item:hover {
+    background-color: #ff0000;
+    border-bottom: 0;
+}
+
+.nav-item:hover .nav-dropdown-list {
+    display: block;
+    position: absolute;
+    transition: all 0.5s;
+    font-size: 10px;
+    font-weight: 500;
+    min-width: 150px;
+    background-color: #F14D34;
+}
+
+.dropdown-button-menu {
+    position: relative;
+}
+
+.dropdown-button-menu::after {
+    background: url("data:image/svg+xml,%3Csvg width='9' height='6' viewBox='0 0 9 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath opacity='0.24' d='M1 1L4.5 4.5L8 1' stroke='white' stroke-width='2'/%3E %3C/svg%3E") no-repeat scroll center center;
+    content: "";
+    height: 13px;
+    width: 16px;
+
+    position: absolute;
+    right: -15px;
+    top: -13px;
+}
+
+/*телефон, язык*/
+.dropdown-button {
+    position: relative;
+    margin-left: 38px;
+    font-weight: 700;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+}
+
+.dropdown-button::after {
+    background: url("data:image/svg+xml,%3Csvg width='9' height='6' viewBox='0 0 9 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E %3Cpath opacity='0.24' d='M1 1L4.5 4.5L8 1' stroke='white' stroke-width='2'/%3E %3C/svg%3E") no-repeat scroll center center;
+    content: "";
+    height: 13px;
+    position: absolute;
+    right: -20px;
+    width: 16px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(90, 90, 90, 0.5);
+}
+
+.drop-lang{
+    color: #fff;
+    padding: 2px 38px;
+    text-decoration: none;
+    display: block;
+}
+
+.drop-lang:hover {
+    background-color: rgba(90, 90, 90, 1);
+}
+
+.dropdown:hover .dropdown-content {
+    cursor: pointer;
+    display: block;
+}
+
+@media screen and (max-width: 768px) {
+    .navbar {
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 1);
+    }
+
+    #navbar-scrolled {
+        position: fixed;
+        transition: all 0.5s;
+        bottom: 0;
+        left: 0;
+        top:inherit;
+        background: rgba(0, 0, 0, 1);
+    }
+
+    .navbar-info {
+        display: none;
+    }
+
+    .nav-item {
+        position: relative;
+        width: 100%;
+    }
+
+    .nav-menu {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 75vh;
+        position: absolute;
+        bottom: 80px;
+        left: -100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+    }
+
+    .active {
+        background: #242222;
+        left: 0;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 1;
+    }
+
+    .nav-item .active {
+        opacity: 1;
+        padding-bottom: 2rem;
+        transition: all 0s;
+        border-bottom: none;
+    }
+
+    .menu-icon {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(-100%, 60%);
+        font-size: 1.8rem;
+        cursor: pointer;
+    }
+
+    .nav-links {
+        margin-top: 10px;
+        text-align: center;
+        padding: 20px;
+        width: 100%;
+        display: table;
+    }
+
+    .nav-links:hover {
+        background-color: #fff;
+        color: #242424;
+        border: none;
+        padding: 2rem;
+    }
+
+    .nav-item:hover {
+        background-color: rgba(90, 90, 90, 1);
+    }
+
+    .navbar-logo {
+        margin-right: 20px;
+    }
+
+    /*выпадающий список*/
+    .dropdown-button-menu::after {
+        top: -45px;
+        right: 100px;
+    }
+
+    .nav-item:hover .nav-dropdown-list {
+        position: relative;
+        background-color: transparent;
+
+        font-size: 12px;
+        font-weight: 400;
+
+        width: 100%;
+
+        text-align: center;
+    }
+}
