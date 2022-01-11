@@ -5,7 +5,8 @@ export const Button = ({
                            children, //аргумент внутри тега
                            onClick, //функция, реагирующая на клик
                            buttonStyle,
-                           buttonClasses
+                           buttonClasses,
+    disabled
 }) => {
     const STYLES = [
         'btn--white',
@@ -19,7 +20,8 @@ export const Button = ({
     return(
         <button
             onClick={onClick}
-            className={`btn ${buttonClasses} ${checkButtonStyle} btn--medium`}
+            className={disabled ? `btn ${buttonClasses} disabled ${checkButtonStyle} btn--medium` : `btn ${buttonClasses} ${checkButtonStyle} btn--medium`}
+            disabled={disabled}
         >
             {children}
         </button>

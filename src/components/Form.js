@@ -13,19 +13,8 @@ const Form = () => {
         reset /*очистка полей формы после отправки*/
     } = useForm({ mode: 'onChange' });
 
-
-
-
-    //заменить на фетч
     const onSubmit = async (data) => {
-        setB(true);
-
-        if (!isValid) {
-            buttonClasses.push('disabled ');
-            //класс не добавляется(вне зависимоти где вызвать .push)
-        } else {
-            buttonClasses = [' '];
-        }
+        setBtnDisable(true);
 
         console.log(data);
         localStorage.setItem('имя', data.name);
@@ -34,17 +23,6 @@ const Form = () => {
         localStorage.setItem('комментарий', data.comment);
 
         let formdata= JSON.stringify(data);
-
-       /* const formdata = new FormData(event.target)
-        // convert FormData to json object
-        const json = {}
-        formdata.forEach(function (value, prop) {
-            json[prop] = value
-        })
-
-        // convert json to urlencoded query string
-        const formBody = Object.keys(json).map(key => encodeURIComponent(key) + '=' + encodeURIComponent(json[key])).join('&')
-        */
 
         const response = await fetch('https://api.slapform.com/oenfcnVza',{
             method: "POST",
@@ -55,19 +33,28 @@ const Form = () => {
                     console.log(response.json());
                     alert("Форма успешно отправлена");
                 reset();
+                setBtnDisable(false);
                 }
                 else throw response;
                 })
                 .catch(error=>{
                     console.log("Ошибка ",error);
                     alert("Ошибка! Пожалуйста, отправьте форму еще раз");
+                    setBtnDisable(false);
                 })
+        setBtnDisable(false);
     }
 
     /*обработка добавления класса для блокировки кнопки отправления*/
     let buttonClasses = [' '];
-            
-    const [b, setB] = useState(false);
+    console.log(isValid)
+    if (!isValid) {
+        buttonClasses.push('disabled ');
+    } else {
+        buttonClasses = [' '];
+    }
+
+    const [btnDisable, setBtnDisable] = useState(false);
 
     return (
         <form method="POST" onSubmit={handleSubmit(onSubmit)}>
@@ -126,10 +113,9 @@ const Form = () => {
             </label>
             <br />
 
-            <Button buttonStyle="btn--form" buttonClasses={buttonClasses.join("")} type={"submit"} disabled={b}>ОСТАВИТЬ ЗАЯВКУ!</Button> 
+            <Button disabled={btnDisable} buttonStyle="btn--form" buttonClasses={buttonClasses.join("")} type={"submit"}>ОСТАВИТЬ ЗАЯВКУ!</Button>
         </form>
-    ); 
-    //disabled={b} не работает
+    );
 };
 
 export default Form;
