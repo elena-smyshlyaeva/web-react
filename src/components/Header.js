@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from "react-router-dom";
+import {Link} from "react-scroll";
 import './Header.css'
 import Background from './videos/video.mp4';
 import Cup from './images/cup.png'
@@ -26,7 +26,7 @@ const Header = () => {
                             Сопровождение и поддержка сайтов <br /> на CMS Drupal любых версий
                             и запущенности
                         </h2>
-                        <Link to="rates">
+                        <Link to='plans'>
                             <Button buttonStyle={'btn--white'}>ТАРИФЫ</Button>
                         </Link>
                     </div>
