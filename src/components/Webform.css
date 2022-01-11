@@ -2,16 +2,16 @@
     margin-top: 160px;
     background: linear-gradient(261.2deg, rgba(255, 255, 255, 0.276) -114.85%, rgba(255, 255, 255, 0) 69.04%), #040613;
     color: #fff;
-    position: relative;
-    z-index: -1;
 }
 .d-images{
-    z-index: -1;
+    background-image: url(./images/d1.svg);
+        background-repeat: no-repeat;
+        background-size:19%;
+        background-position: top center;
 }
 .webform-container {
     display: flex;
     justify-content: space-between;
-    z-index: 0;
     max-width: 1196px;
     margin: 0 auto;
     padding-top: 110px;
@@ -42,7 +42,6 @@
 .webform-number {
     font-size: 32px;
     font-weight: bold;
-
     display: flex;
 }
 
@@ -55,7 +54,6 @@
     font-weight: bold;
     line-height: 150%;
     text-decoration: underline;
-
     display: flex;
 }
 
@@ -66,17 +64,7 @@
 .webform-form {
     width: 480px;
 }
-.d-flying{
-    position: absolute;
-    left:40%;
-    z-index: -1;
-}
-.D-flying{
-    position: absolute;
-    z-index: -1;
-    bottom:0;
-    right:0;
-}
+
 
 @media screen and (max-width: 769px) {
     .webform-container {
@@ -115,8 +103,5 @@
 
     .webform-form {
         width: 100%;
-    }
-    .d-flying{
-        opacity: 0.7;
     }
 }
