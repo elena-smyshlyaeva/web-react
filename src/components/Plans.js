@@ -4,9 +4,11 @@ import { Link } from 'react-router-dom';
 import D from "./images/D.svg";
 import Modal from './Modal';
 import { Button } from "./Button";
-
+import {CSSTransition} from 'react-transition-group'
+ 
 function Plans() {
-    const [modalActive, setModalActive] = useState(false);
+    
+    const[show,setShow]=useState(false)
     return (
         <div className="plans" id="plans">
             <img src={D} alt="D" className="plans-background" />
@@ -45,7 +47,7 @@ function Plans() {
                         </div>
                         <div className="plans-btn">
                             <Link to="/modal">
-                            <Button onClick={() => setModalActive(true)} buttonStyle="btn--orange">ОСТАВИТЬ ЗАЯВКУ!</Button>
+                            <Button onClick={() => setShow(true)} buttonStyle="btn--orange">ОСТАВИТЬ ЗАЯВКУ!</Button>
                             </Link>
                         </div>
                     </div>
@@ -79,7 +81,7 @@ function Plans() {
                         </div>
                         <div className="plans-btn">
                             <Link to="/modal">
-                            <Button onClick={() => setModalActive(true)} buttonStyle="btn--orange">ОСТАВИТЬ ЗАЯВКУ!</Button>
+                                <Button onClick={() => setShow(true)} buttonStyle="btn--orange">ОСТАВИТЬ ЗАЯВКУ!</Button>
                             </Link>
                         </div>
                     </div>
@@ -113,7 +115,7 @@ function Plans() {
                         </div>
                         <div className="plans-btn">
                             <Link to="/modal">
-                            <Button onClick={() => setModalActive(true)} buttonStyle="btn--orange">ОСТАВИТЬ ЗАЯВКУ!</Button>
+                                <Button onClick={() => setShow(true)} buttonStyle="btn--orange">ОСТАВИТЬ ЗАЯВКУ!</Button>
                             </Link>
                         </div>
                     </div>
@@ -128,7 +130,10 @@ function Plans() {
                     </div>
                 </div>
             </div>
-            <Modal active={modalActive} setActive={setModalActive} />
+            <CSSTransition in={show} classNames='alert' timeout={300} unmoutOnExit onEnter={() => setShow(true)}
+                onExited={() => setShow(false)}>
+            <Modal showModal={show} setShowModal={setShow}/>
+            </CSSTransition>
         </div>
     );
 }
