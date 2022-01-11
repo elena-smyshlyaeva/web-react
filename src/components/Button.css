@@ -45,9 +45,10 @@
 .btn--orange:hover {
     color: #fff;
 }
-.disabled{
+.disabled {
     background-image: url(../components/images/loading.gif);
-    content:" ";
+    content: " ";
+}
 
 .btn--black:hover {
     background-color: #050C33;
