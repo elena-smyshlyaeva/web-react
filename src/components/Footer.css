@@ -2,6 +2,10 @@
     margin-top: 71px;
     position: relative;
     border-top: 1px solid #ffffff80;
+    background-image: url(./images/d2.svg);
+    background-repeat: no-repeat;
+    background-size:32%;
+    background-position: bottom right;
 }
 .footer-container {
     max-width: 1210px;
