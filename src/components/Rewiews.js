@@ -163,7 +163,7 @@ function decrement(){
                     </Slider>
                         
                     </div>
-                    <h1>{zero}{count}<p> / 14</p></h1>
+                    <h1>{zero}{count}<p className="num"> / 14</p></h1>
                 </div>
             </div>
         );
