@@ -1,13 +1,18 @@
 import React from 'react';
 import Form from "./Form";
+import Footer from './Footer';
 import './Webform.css'
 import { ReactComponent as Phone } from "../components/images/phone-line.svg";
 import { ReactComponent as Mail } from "../components/images/mail.svg";
-
+import D1 from "../components/images/d1.svg";
+import D2 from "../components/images/d2.svg";
 
 const Webform = () => {
     return (
         <div className="webform" id="contacts">
+            <div className='d-images'>
+            <img src={D1} alt="" className='d-flying'/>
+            <img src={D2} alt="" className='D-flying'/>
             <div className="webform-container">
                 <div className="webform-contacts">
                     <div className="webform-text">
@@ -31,6 +36,8 @@ const Webform = () => {
                 <div className="webform-form">
                     <Form />
                 </div>
+            </div>
+            <Footer/>
             </div>
         </div>
     );
