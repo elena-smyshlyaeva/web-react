@@ -46,7 +46,7 @@ function NavBar() {
             <nav className="navbar" id={navbarClasses.join('-')}>
                 <div className='navbar-container'>
                     <div className="navbar-logo-menu">
-                        <Link to='/' className='navbar-logo' onClick={closeMobileMenu}>
+                        <Link to='header' className='navbar-logo' onClick={closeMobileMenu}>
                             <LogoSvg/>
                         </Link>
                         <div className="menu-icon" onClick={handleClick}>
@@ -111,7 +111,7 @@ function NavBar() {
 
                             <li className='nav-item'>
                                 <Link
-                                    to='reviews'
+                                    to='rewiews'
                                     className='nav-links'
                                     onClick={closeMobileMenu}
                                     spy={true}
