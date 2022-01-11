@@ -8,6 +8,8 @@
     height: 60px;
     border-radius: 5px;
     color: #fff;
+
+    cursor: pointer;
 }
 
 .btn--white {
@@ -45,6 +47,7 @@
 .btn--orange:hover {
     color: #fff;
 }
+
 .disabled {
     background-image: url(../components/images/loading.gif);
     content: " ";
