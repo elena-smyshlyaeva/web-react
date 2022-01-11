@@ -50,3 +50,17 @@
     background-color: #050C33;
     color: #fff;
 }
+
+.btn--form {
+    background-color: var(--primary);
+}
+
+.btn--form:hover {
+    background-color: #fff;
+    color: var(--primary);
+}
+
+.disabled:hover {
+    background-color: var(--primary);
+    color: #fff;
+}
