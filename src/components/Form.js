@@ -5,6 +5,8 @@ import './Form.css'
 import Mark from "../components/images/mark.svg";
 import MarkRectangle from "../components/images/mark-rectangle.svg";
 
+import Swal from 'sweetalert2';
+
 const Form = () => {
     const {
         register, /*регистрации элементов формы для дальнейшего отслеживания*/
@@ -31,7 +33,11 @@ const Form = () => {
                 .then( response => {
                 if (response.ok) {
                     console.log(response.json());
-                    alert("Форма успешно отправлена");
+                    Swal.fire({
+                        title: 'success',
+                        text: 'Форма успешно отправлена!',
+                        icon: 'success',
+                    });
                 reset();
                 setBtnDisable(false);
                 }
@@ -39,7 +45,11 @@ const Form = () => {
                 })
                 .catch(error=>{
                     console.log("Ошибка ",error);
-                    alert("Ошибка! Пожалуйста, отправьте форму еще раз");
+                    Swal.fire({
+                        title: 'error',
+                        text: 'Ошибка! Пожалуйста, отправьте форму еще раз',
+                        icon: 'error',
+                    });
                     setBtnDisable(false);
                 })
         setBtnDisable(false);
