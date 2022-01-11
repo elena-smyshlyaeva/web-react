@@ -1,16 +1,24 @@
 import './App.css';
 import NavBar from './components/NavBar';
-import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import Header from "./components/Header";
+import Services from "./components/Services";
+import Support from "./components/Support";
+import Expertise from "./components/Expertise";
+import Plans from "./components/Plans";
+import Cases from "./components/Cases";
+import Webform from "./components/Webform";
 
 function App() {
   return (
       <>
-          <Router>
-              <NavBar/>
-              <Routes>
-                  <Route path='/' exact />
-              </Routes>
-          </Router>
+          <NavBar/>
+          <Header/>
+          <Services/>
+          <Support/>
+          <Expertise/>
+          <Plans/>
+          <Cases/>
+          <Webform/>
       </>
   );
 }
