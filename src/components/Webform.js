@@ -11,8 +11,6 @@ const Webform = () => {
     return (
         <div className="webform" id="contacts">
             <div className='d-images'>
-            <img src={D1} alt="" className='d-flying'/>
-            <img src={D2} alt="" className='D-flying'/>
             <div className="webform-container">
                 <div className="webform-contacts">
                     <div className="webform-text">
