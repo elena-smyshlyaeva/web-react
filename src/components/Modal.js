@@ -2,28 +2,35 @@ import React from 'react';
 import './Modal.css';
 import { useNavigate } from 'react-router-dom';
 import Form from './Form';
+import { CSSTransition } from 'react-transition-group'
 
-
-const Modal = ({ active, setActive}) => {
+const Modal = ({ showModal, setShowModal }) => {
     const history = useNavigate();
     window.addEventListener('popstate',(e) => {
             if (e.state) {
-                setActive(false);
+                setShowModal(false);
                 history.push('/');
             }
         },
         false
     );
+    if(showModal==false){
 
+        <CSSTransition in={showModal} classNames='alert' timeout={300} unmoutOnExit
+            onExited={() => setShowModal(true)}>
+            <Modal />
+        </CSSTransition>
+    }
     return (
-        <div className={active ? 'modal active' : 'modal'} onClick={() => {
-            setActive(false);
+        
+        <div className={showModal ? 'modal active' : 'modal'} onClick={() => {
+            setShowModal(false);
             history.push('/');
         }}>
             <div className={'modal-content'} onClick={(e) => {e.stopPropagation();}}>
                 <div
                     className="modal-content-close" onClick={() => {
-                        setActive(false);
+                        setShowModal(false);
                         history.push('/');
                     }}>×</div>
                 <Form/>
