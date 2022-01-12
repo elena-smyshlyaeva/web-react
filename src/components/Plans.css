@@ -166,7 +166,7 @@
     border-bottom: 1px solid #050C33;
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 1080px) {
     .plans-items {
         flex-direction: column;
         background-color: transparent;
