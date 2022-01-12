@@ -51,6 +51,7 @@ input:checked~ .mark {
 .checkbox-title{
     font-size: 12px;
     line-height: 15px;
+    color: #fff;
     margin: auto 10px;
 }
 
