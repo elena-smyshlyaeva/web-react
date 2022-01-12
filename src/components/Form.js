@@ -4,6 +4,7 @@ import { Button } from "./Button";
 import './Form.css'
 import Mark from "../components/images/mark.svg";
 import MarkRectangle from "../components/images/mark-rectangle.svg";
+import Loading from "../components/images/loading.gif";
 
 import Swal from 'sweetalert2';
 
@@ -68,6 +69,9 @@ const Form = () => {
 
     return (
         <form method="POST" onSubmit={handleSubmit(onSubmit)}>
+            <div className={btnDisable ? "spinner-show" : "spinner-hide"}>
+                <img className="spinner-gif" src={Loading}/>
+            </div>
             <input
                 placeholder='Ваше имя'
                 {...register('name', { required: true })}
