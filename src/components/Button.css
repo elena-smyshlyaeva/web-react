@@ -48,11 +48,6 @@
     color: #fff;
 }
 
-.disabled {
-    background-image: url(../components/images/loading.gif);
-    content: " ";
-}
-
 .btn--black:hover {
     background-color: #050C33;
     color: #fff;
