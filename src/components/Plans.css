@@ -73,7 +73,7 @@
 
 }
 
-.plans p, .plans-li {
+.plans-item-title p, .plans-li {
     margin: 0;
     color: #050C33;
 }
