@@ -10,6 +10,7 @@ function Footer() {
                         зарегистрированной торговой маркой Dries Buytaert.
                     </div>
                 </div>
+                <div className='space-for-navbar'></div>
         </footer>
     );
 }
