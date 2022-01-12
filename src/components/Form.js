@@ -34,7 +34,7 @@ const Form = () => {
                 if (response.ok) {
                     console.log(response.json());
                     Swal.fire({
-                        title: 'success',
+                        title: 'ОТПРАВЛЕНО',
                         text: 'Форма успешно отправлена!',
                         icon: 'success',
                     });
@@ -46,7 +46,7 @@ const Form = () => {
                 .catch(error=>{
                     console.log("Ошибка ",error);
                     Swal.fire({
-                        title: 'error',
+                        title: 'ОШИБКА',
                         text: 'Ошибка! Пожалуйста, отправьте форму еще раз',
                         icon: 'error',
                     });
