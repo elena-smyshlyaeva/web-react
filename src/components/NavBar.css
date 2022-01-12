@@ -19,7 +19,7 @@
     display: flex;
 }
 
-.active {
+.navbar-logo-menu .active {
     padding-bottom: 5px;
     transition: all 0.2s;
     border-bottom: 2px solid #F14D34;
@@ -87,7 +87,7 @@
     border-bottom: 2px solid #F14D34;
 }
 
-.active:hover {
+.navbar .active:hover {
     border-bottom: 0;
     padding-bottom: 0;
 }
@@ -212,7 +212,7 @@
         transition: all 0.5s ease;
     }
 
-    .active {
+    .navbar .active {
         background: #242222;
         left: 0;
         opacity: 1;
