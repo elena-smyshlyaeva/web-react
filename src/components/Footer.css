@@ -22,3 +22,11 @@
    line-height: 17px;
    opacity: 0.5;
 }
+@media screen and (max-width: 768px) {
+    .space-for-navbar{
+        height:80px;
+    }
+    .footer{
+        background-position: bottom 80px right;
+    }
+}
