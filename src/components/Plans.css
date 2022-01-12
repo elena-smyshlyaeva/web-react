@@ -73,7 +73,7 @@
 
 }
 
-p, .plans-li {
+.plans p, .plans-li {
     margin: 0;
     color: #050C33;
 }
