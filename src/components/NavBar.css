@@ -78,7 +78,6 @@
     transition: all 0.5s;
     border-bottom: 2px solid #F14D34;
     opacity: 1;
-
 }
 
 .nav-item .active {
@@ -204,16 +203,17 @@
         display: flex;
         flex-direction: column;
         width: 100%;
-        height: 75vh;
         position: absolute;
         bottom: 80px;
         left: -100%;
         opacity: 1;
         transition: all 0.5s ease;
+
+        padding-left: 20px;
     }
 
     .navbar .active {
-        background: #242222;
+        background: black;
         left: 0;
         opacity: 1;
         transition: all 0.5s ease;
@@ -222,7 +222,7 @@
 
     .nav-item .active {
         opacity: 1;
-        padding-bottom: 2rem;
+        padding-bottom: 20px;
         transition: all 0s;
         border-bottom: none;
     }
@@ -238,8 +238,6 @@
     }
 
     .nav-links {
-        margin-top: 10px;
-        text-align: center;
         padding: 20px;
         width: 100%;
         display: table;
@@ -253,7 +251,7 @@
     }
 
     .nav-item:hover {
-        background-color: rgba(90, 90, 90, 1);
+        background-color: transparent;
     }
 
     .navbar-logo {
@@ -262,19 +260,23 @@
 
     /*выпадающий список*/
     .dropdown-button-menu::after {
-        top: -45px;
-        right: 100px;
+        top: -33px;
+        left: 160px;
     }
 
     .nav-item:hover .nav-dropdown-list {
-        position: relative;
         background-color: transparent;
+        position: relative;
 
         font-size: 12px;
         font-weight: 400;
 
         width: 100%;
-
-        text-align: center;
+        padding-left: 15px;
     }
+
+    .nav-item:hover .nav-menu {
+        height: 400px;
+    }
+
 }
